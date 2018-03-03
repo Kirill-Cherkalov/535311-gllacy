@@ -45,8 +45,7 @@
   	<main> 
   		<section class="offers">
   			<div class="container">
-	  			<div class="free-items">
-	  				<!-- я посто хотел отделить беслатный мерч от мороженко:) -->
+	  			<article class="free-items">
 		  			<div class="offer item-1">
 		  				<p class="offer-title">
 		  					Малинка даром!
@@ -65,9 +64,8 @@
 		  				</p>
 		  				<a class="btn">Хочу шоколадки!</a>
 		  			</div>
-		  		</div>
-		  		<!-- я в блок section сунул div или можно section>section -->
-		  		<section class="icecreams">
+		  		</article>
+		  		<article class="icecreams">
 		  			<div class="icecream item-1">
 						<img src="#" alt="Хит">
 		  				<img src="#" alt="Сливочное">
@@ -108,43 +106,47 @@
 		  					Сливочное крем-брюле с карамельной подливкой
 		  				</p>
 		  			</div>
-		  		</section>
+		  		</article>
 	  		</div>
   		</section>
   		<section class="description">
-  				<!-- я тут тоже думал не пихать заголоков в список, но я все еще не отошел от лекции, где александр продивигал списки везде -->
-  			<div class="advantage-title">
-  					<h3>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес<</h3>
+  			<div class="container">
+	  				<!-- я тут тоже думал не пихать заголоков в список, но я все еще не отошел от лекции, где александр продивигал списки везде -->
+	  			<div class="advantage-title">
+	  					<h3>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес<</h3>
+	  			</div>
+	  			<ul class="advantages">
+	  				<li class="advantage item-1">
+	  					<p class="advantage-description">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+	  				</li>
+	  				<li class="advantage item-2">
+	  					<p class="advantage-description">Закупка ингредиентов  производится только у проверенных фермерский хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+	  				</li>
+	  				<li class="advantage item-3">
+	  					<p class="advantage-description">Для приготовления мороженного используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингридиенты и добавки произведены из натурального, экологически чистого сырья.</p>
+	  				</li>
+	  				<li class="advantage item-4">
+	  					<p class="advantage-description">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+	  				</li>
+	  			</ul>
   			</div>
-  			<ul class="advantages">
-  				<li class="advantage item-1">
-  					<p class="advantage-description">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
-  				</li>
-  				<li class="advantage item-2">
-  					<p class="advantage-description">Закупка ингредиентов  производится только у проверенных фермерский хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
-  				</li>
-  				<li class="advantage item-3">
-  					<p class="advantage-description">Для приготовления мороженного используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингридиенты и добавки произведены из натурального, экологически чистого сырья.</p>
-  				</li>
-  				<li class="advantage item-4">
-  					<p class="advantage-description">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
-  				</li>
-  			</ul>
   		</section>
   		<section class="about-us">
-  			<article class="news">
-  				<p class="news-title">Новое о нашем блоге</p>
-  				<p class="new-text">
-  					10 способов сервировки фруктовых щербетов к столу
-  				</p>
-  			</article>
-  			<article class="feedback">
-  				<form action="" class="feedback-form">
-	  				<label for="email">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что происхдит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</label>
-	  				<input type="email" id="email" placeholder="Электронная почта" requred>
-	  				<button class="btn" >Отправить</button>
-  				</form>
-  			</article>
+  			<div class="container">
+	  			<article class="news">
+	  				<p class="news-title">Новое о нашем блоге</p>
+	  				<p class="new-text">
+	  					10 способов сервировки фруктовых щербетов к столу
+	  				</p>
+	  			</article>
+	  			<article class="feedback">
+	  				<form action="" class="feedback-form">
+		  				<label for="email">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что происхдит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</label>
+		  				<input type="email" id="email" placeholder="Электронная почта" requred>
+		  				<button class="btn" >Отправить</button>
+	  				</form>
+	  			</article>
+  			</div>
   		</section>
   	</main>
   	<section class="map">
@@ -153,7 +155,7 @@
   				Адрес главного офиса
   				и офлайн-магазина:
   				<b>ул. Большая Конюшенная
-  				19/8, Санкт-Петербург
+  				19/8, Санкт-Петербург</b>
   			</p>
   			<p>
   				Для заказов по телефону: 
@@ -164,26 +166,44 @@
   		</div>
   	</section>
   	<footer class="main-footer">
-  		<div class="footer-social">
-  			<ul>
-  				<li><a class="social-button" href="#">Твиттер</a></li>
-  				<li><a class="social-button" href="#">Инста</a></li>
-  				<li><a class="social-button" href="#">Фейсбук</a></li>
-  				<li><a class="social-button" href="#">ВК</a></li>
-  			</ul>
-  		</div>
-		<div class="i-dont-know">
-			<ul>
-				<li><a class="footer-button" href="#">Для поставщиков</a></li>
-				<li><a class="footer-button" href="#">О производстве</a> </li>
-				<li><a class="footer-button" href="#">Наши документы</a></li>
-				<li><a class="footer-button" href="#">Экологические стандарты</a></li>
-			</ul>
-		</div>
-  		<div class="footer-copyright">
-  			<p class="footer-description">
-  				Сделано в <a class="footer-button" href="#">HTML Academy</a> © 2017
-  			</p>
+  		<div class="container">
+	  		<article class="footer-social">
+	  			<ul>
+	  				<li>
+	  					<a class="social-button" href="#">Твиттер</a>
+	  				</li>
+	  				<li>
+	  					<a class="social-button" href="#">Инста</a>
+	  				</li>
+	  				<li>
+	  					<a class="social-button" href="#">Фейсбук</a>
+	  				</li>
+	  				<li>
+	  					<a class="social-button" href="#">ВК</a>
+	  				</li>
+	  			</ul>
+	  		</article>
+			<article class="i-dont-know">
+				<ul>
+					<li>
+						<a class="footer-button" href="#">Для поставщиков</a>
+					</li>
+					<li>
+						<a class="footer-button" href="#">О производстве</a>
+						</li>
+					<li>
+						<a class="footer-button" href="#">Наши документы</a>
+					</li>
+					<li>
+						<a class="footer-button" href="#">Экологические стандарты</a>
+					</li>
+				</ul>
+			</article>
+	  		<article class="footer-copyright">
+	  			<p class="footer-description">
+	  				Сделано в <a class="footer-button" href="#">HTML Academy</a> © 2017
+	  			</p>
+	  		</article>
   		</div>
   	</footer>
   	<section class="modal modal-navigation">
@@ -201,8 +221,12 @@
 	  		<input type="password " placeholder="Пароль" requred>
 	  		<button class="btn modal-btn">Войти</button>
 	  		<ul class="modal-login list">
-	  			<li><a class="modal-login-btn" href="#"></a>Забыли пароль?</li>
-	  			<li><a class="modal-login-btn" href="#"></a>Новая регистрация</li>
+	  			<li>
+	  				<a class="modal-login-btn" href="#">Забыли пароль?</a>
+	  			</li>
+	  			<li>
+	  				<a class="modal-login-btn" href="#">Новая регистрация</a>
+	  			</li>
 	  		</ul>
   		</form>
   	</section>
