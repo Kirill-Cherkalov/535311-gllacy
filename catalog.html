@@ -35,33 +35,64 @@
 			Сливочное мороженое 
 		</h1>
 		<section class="main-filter">
-			<p class="first-filter">
-				<p class="first-filter-title">Сортировка:</p>
-			</p>
-			<p class="second-filter">
-				<p class="second-filter-title">Цена: 100 руб. – 500 руб.</p>
-				<input type="range" id="dayscount" name="dayscount" min="1" max="14" step="1">
-			</p>
-			<p class="third-filter">
-				<p class="third-filter-title">Жирность:</p>
-				<ul class="third-filter-list">
-					<li><input type="radio" name="weight" checked></li>
-					<li><input type="radio" name="weight" ></li>
-					<li><input type="radio" name="weight" ></li>
-					<li><input type="radio" name="weight" ></li>
-				</ul>
-			</p>
-			<p class="four-filter">
-				<p class="four-filter-title">Наполнители:</p>
-				<ul class="four-filter-list">
-					<li><input type="checkbox" checked>шоколадные</li>
-					<li><input type="checkbox">сахарные присыпки</li>
-					<li><input type="checkbox">фрукты</li>
-					<li><input type="checkbox">сиропы</li>
-					<li><input type="checkbox">джемы</li>
-				</ul>
-			</p>
-			<button class="btn-filter">Применить</button>
+			<form action="">
+				<fieldset>
+					<p class="first-filter">
+						<p class="first-filter-title">Сортировка:</p>
+					</p>
+					<p class="second-filter">
+						<p class="second-filter-title">Цена: 100 руб. – 500 руб.</p>
+						<input type="range" id="dayscount" name="dayscount" min="1" max="14" step="1">
+					</p>
+					<p class="third-filter">
+						<p class="third-filter-title">Жирность:</p>
+						<ul class="third-filter-list">
+							<li>
+								<input id="third-filter-1" type="radio" name="weight" checked>
+								<label for="third-filter-1">0%</label>
+							</li>
+							<li>
+								<input id="third-filter-2" type="radio" name="weight">
+								<label for="third-filter-2">до 10%</label>
+							</li>
+							<li>
+								<input id="third-filter-3" type="radio" name="weight">
+								<label for="third-filter-3">до 30%</label>
+							</li>
+							<li>
+								<input id="third-filter-4" type="radio" name="weight">
+								<label for="third-filter-4">выше 30%</label>
+							</li>
+						</ul>
+					</p>
+					<p class="four-filter">
+						<p class="four-filter-title">Наполнители:</p>
+						<ul class="four-filter-list">
+							<li>
+								<input id="four-filter-1"type="checkbox">
+								<label for="four-filter-1">шоколадные</label>
+							</li>
+							<li>
+								<input id="four-filter-2" type="checkbox">
+								<label for="four-filter-2">сахарные присыпки</label>
+							</li>
+							<li>
+								<input id="four-filter-3" type="checkbox">
+								<label for="four-filter-3">фрукты</label>
+							</li>
+							<li>
+								<input id="four-filter-4" type="checkbox">
+								<label for="four-filter-4">сиропы</label>
+							</li>
+							<li>
+								<input id="four-filter-5" type="checkbox">
+								<label for="four-filter-5">джемы</label>
+							</li>
+						</ul>
+					</p>
+					<button class="btn-filter">Применить</button>
+				</fieldset>
+			</form>
 		</section>
 		<section class="products">
 			<ul class="products-list">
