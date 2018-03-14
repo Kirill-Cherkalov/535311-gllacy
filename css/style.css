@@ -100,26 +100,24 @@ a {
 	/*анимация пролистывания изображений*/
 	transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
 }
-
-.free-items .offer.item-1 {
-	background-image: url(../img/rusberry-backend.png);
+/*--------------------------------------------------------------------*/
+.free_items .offer,
+.free_items .offer:first-child {
+	background-image: url(../img/raspberry-bg.png);
 	background-repeat: no-repeat;
 	height: 230px;
 	max-width: 560px; 
 }
 
-.free-items .offer.item-2 {
-	background-image: url(../img/chocolate-backend.png);
-	background-repeat: no-repeat;
-	height: 230px;
-	max-width: 560px;
+.free_items .offer:last-child {
+	background-image: url(../img/chocolate-bg.png); 
 }
 
-.icecreams-container-image > img {
+.icecreams_container_image > img {
 	border-radius: 150px;
 }
 
-.icecreams-container-image:before {
+.icecreams_container_image:before {
 	content: "";
 	display: block;
 	background-image: url(../img/hit.svg);
@@ -128,25 +126,54 @@ a {
 	height: 61px;
 }
 
-
-.advantages .advantage.item-1:before {
-	background-image: url(../img/ice-cream.svg);
+.description {
+	margin: 0;
+	padding: 0;
+	display: flex;
 }
 
-.advantages .advantage.item-2:before {
+.advantages_list {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	list-style-type: none;
+	justify-content: space-around;
+	position: relative;
+
+}
+.advantages_list .advantage.item {
+	flex-basis: 500px;
+	padding-left: 50px;
+	position: relative;
+}
+
+.advantage.item .advantage-description:before {
+	content: "";
+	background-image: url(../img/ice-cream.svg);
+	display: block;
+	height: 49px;
+	width: 49px;
+	border-radius: 16px;
+	position: absolute;
+	left: 0;
+}
+
+.advantage.item:nth-child(2) .advantage-description:before {
 	background-image: url(../img/eco.svg);
 }
 
-.advantages .advantage.item-3:before {
+.advantage.item:nth-child(3) .advantage-description:before {
 	background-image: url(../img/cow.svg);
 }
 
-.advantages .advantage.item-4:before {
+.advantage.item:nth-child(4) .advantage-description:before {
 	background-image: url(../img/thermometer.svg) ;
 }
 
 .news {
-	background-image: url("../img/strawberry-backend.png");
+	background-image: url("../img/strawberry-bg.png");
 	background-repeat: no-repeat;
 	max-width: 560px;
 	height: 220px;
@@ -157,14 +184,14 @@ a {
 	box-sizing: border-box;
 }
 
-.description .description-info{
-	background-image: url(../img/waffle-backend.png);
+.description .description_info{
+	background-image: url(../img/waffle-bg.png);
 	background-repeat: no-repeat;
 	height: 306px;
 	max-width: 1146px;
 }
 
-.news .new-text {
+.news .new_text {
 	width: 280px;
 	line-height: 30px;
 	font-size: 24px;
@@ -173,7 +200,7 @@ a {
 }
 
 .about-us .feedback {
-	background-image: url(../img/gradient-backend.png);
+	background-image: url(../img/bg-post.svg);
 	background-repeat: no-repeat;
 	height: 220px;
 	max-width: 560px;
@@ -194,7 +221,7 @@ a {
 	height: 140px;
 }
 
-.footer-info-list li:first-child .footer-button:before {
+.footer_info_list li:first-child .footer_button:before {
 	content: "";
 	display: inline-block;
 	background-image: url(../img/heart.svg) no-repeat;
@@ -202,7 +229,7 @@ a {
 	height: 13px;
 }
 
-.footer-copyright .footer-description:before {
+.footer_copyright .footer_description:before {
 	content: "";
 	display: block;
 	background-image: url(../img/logo-htmlacademy.svg) no-repeat;
