@@ -22,6 +22,7 @@ img {
 
 .user_navigation:nth-child(3) {
   margin-right: 0;
+ 
 }
 
 .time_work {
@@ -276,6 +277,95 @@ header .slider_button {
   width: 117px;
   border-radius: 20px;
 }
+/*-----------модалка поиска--------------*/
+
+/* .modal_search {
+  display: none;
+  position: absolute;
+  right: 0;
+} */
+
+.modal_search_form {
+  padding: 20px 15px;
+  width: 341px;
+  box-sizing: border-box;
+  background-color: #f8f7f4;
+  border-radius: 5px;
+}
+
+.modal_search_form input {
+  border: none;
+  box-shadow: 0 0 1px 0 gray;
+  border-radius: 5px;
+  padding: 9px 15px;
+  width: 310px;
+}
+
+
+/*----МОдалка входа в хидере вход-------------*/
+ .user_navigation:nth-child(1),
+ .user_navigation:nth-child(2) {
+  position: relative;
+ }
+.user_navigation:nth-child(2) a:hover ~ .modal_login,
+.user_navigation:nth-child(1) a:hover ~ .modal_search {
+  display: block;
+}
+
+.modal_login:hover,
+.modal_search:hover {
+  display: block;
+}
+
+.modal_login,
+.modal_search {
+  display: none;
+  position: absolute;
+  top: 37px;
+  right: 0;
+}
+
+.modal_user_form {
+  display: flex;
+  flex-direction: column;
+  width: 277px;
+  background-color: #f8f7f4;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 0 20px;
+}
+
+.modal_user_form input {
+  margin: 20px 0;
+  border: none;
+  box-shadow: 0 0 1px 0 gray;
+  border-radius: 5px;
+  padding: 9px 15px;
+}
+
+.modal_login_list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  /* margin-left: auto; */
+}
+
+.modal_btn {
+  width: 100px;
+}
+
+
+.modal_login_btn {
+  font-style: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #000000;
+}
+
+/**----------------------------------*/
 
 /*-----------------СЛАЙДЕР----------------------*/
 
@@ -293,6 +383,7 @@ header .slider_button {
   background-repeat: no-repeat;
   background-position: top center;
   transition: background-image 0.5s ease, background-color 0.5s ease;
+  position: relative;
   /* Для демонстрации */
   /* min-height: 100vh; */
 }
@@ -917,6 +1008,7 @@ a {
   display: flex;
   justify-content: space-between;
   margin-top: 40px;
+  padding-bottom: 30px;
 }
 
 .footer_info_item .link {
@@ -1005,82 +1097,93 @@ a {
   color: #ffbc9e;
 }
 
-.modal_login_btn {
-  font-style: 13px;
-  line-height: 24px;
-  font-weight: 400;
-  color: #000000;
-}
 
 /*----------------модальные окна--------------------*/
 
-.modal_login {}
-
-.modal_user_form {
-  display: flex;
-  flex-direction: column;
-  /* flex-wrap: wrap; */
-  width: 277px;
-  background-color: #f8f7f4;
-  box-sizing: border-box;
-  border-radius: 5px;
-  padding: 0 20px;
-}
-
-.modal_user_form input {
-  margin: 20px 0;
-  border: none;
-  box-shadow: 0 0 1px 0 gray;
-  border-radius: 5px;
-  padding: 9px 15px;
-}
-
-.modal_login_list {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  font-size: 13px;
-  /* margin-left: auto; */
-}
-
-.modal_btn {
-  width: 100px;
-}
-
-/**----------------------------------*/
-
-.modal_search_form {
-  padding: 20px 15px;
-  width: 341px;
-  box-sizing: border-box;
-  background-color: #f8f7f4;
-  border-radius: 5px;
-}
-
-.modal_search_form input {
-  border: none;
-  box-shadow: 0 0 1px 0 gray;
-  border-radius: 5px;
-  padding: 9px 15px;
-  width: 310px;
-}
 
 /*------модальные окна----------обратная связь---------------------*/
+
+.modal_feedback {
+  padding: 20px 25px 25px 25px;
+  background-color: #f8f7f4;
+  box-sizing: border-box;
+  width: 477px;
+  color: #000;
+  border-radius: 10px;
+  position: fixed;
+  top: 308px;
+  left: 50%;
+  margin-left: -240px;
+  z-index: 100;
+
+  display: none;
+}
+
+.feedback_form_title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 26px;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+}
 
 .modal_feedback_form {
   display: flex;
   flex-direction: column;
-  width: 480px;
+  position: relative;
+  
+}
+
+.modal_feedback_form textarea {
+  width: 426px;
+  box-sizing: border-box;
+  border: none;
+  box-shadow: 0 0 1px 0 gray;
+  border-radius: 5px;
+  padding: 10px 15px;
+  resize: none;
+  height: 153px;
+  margin-bottom: 26px;
+}
+
+.modal_feedback_form input {
+  border: none;
+  box-shadow: 0 0 1px 0 gray;
+  border-radius: 5px;
+  padding: 9px 15px;
+  width: 265px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
 }
 
 .feedback_form_btn {
-  background-image: url(../img/cross-big.svg);
-  background-repeat: no-repeat;
-  width: 20px;
-  min-height: 20px;
-  background-color: #804000;
+  /* background-image: url(../img/cross-big.svg); */
+  /* background-repeat: no-repeat; */
+  width: 17px;
+  min-height: 17px;
+  background-color: transparent;
+  position: absolute;
+  border:none;
+  right: -8px;
+  top: 0;
+}
+
+.feedback_form_btn::after {
+    content: "";
+    width: 17px;
+    min-height: 17px;
+    position: absolute;
+    background-image: url('../img/cross-big.svg');
+    background-repeat: no-repeat;
+    top: 0;
+    right: 0;
+}
+
+.modal_feedback_form .btn {
+  width: 138px;
+  box-sizing: border-box;
+  margin-left: auto;
 }
 
 /*-------------Catalog--------------------*/
