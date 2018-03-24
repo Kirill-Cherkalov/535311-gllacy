@@ -5,7 +5,7 @@ body {
   line-height: 22px;
   margin: 0;
   color: white;
-  background-color: gray;
+  background-color: #849d8f;
 }
 
 img {
@@ -14,10 +14,12 @@ img {
 
 .header_navigation_list {
   line-height: 18px;
+  margin: 0;
 }
 
 .user_navigation {
   margin-right: 10px;
+  /* padding-bottom: 10px; */
 }
 
 .user_navigation:nth-child(3) {
@@ -33,6 +35,8 @@ img {
   font-size: 14px;
   line-height: 16px;
   text-align: end;
+  padding: 0;
+  margin: 0;
 }
 
 .time_work a {
@@ -58,7 +62,8 @@ header .slider_button {
 }
 
 .visually_hidden {
-  display: none;
+  /* display: none; */
+  visibility: hidden;
 }
 
 .user_navigation a {
@@ -67,16 +72,14 @@ header .slider_button {
   text-decoration: none;
 }
 
-.user_navigation:not(:nth-child(3)) a:hover {
-  fill: #000;
-  color: #000;
-}
+
 
 /*--------------------HEADER--------------------------*/
 
 .header_navigation_list {
   margin-right: auto;
   position: relative;
+  align-items: center;
 }
 
 .header_navigation>a {
@@ -84,26 +87,34 @@ header .slider_button {
   text-decoration: none;
 }
 
-.header_navigation:nth-child(1) {
-  position: relative;
-}
 
 /*------------- под Каталог розовый---------------*/
+.header_navigation:nth-child(1) {
+  padding: 5px 0;
+}
 
-.header_navigation:nth-child(1)>a {
+
+.header_navigation:nth-child(1) > a {
   min-height: 32px;
   position: relative;
   display: flex;
   border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.2);
+  /* background-color: rgba(255, 255, 255, 0.2); */
   justify-content: center;
-  align-items: top;
+  align-items: center;
+  width: 86px;
 }
+
+.header_navigation:nth-child(1):not(.active):hover > a {
+  background-color: rgba(255, 255, 255, 1);
+  color: #000;
+} 
 
 .sub_menu_list {
   list-style: none;
   position: absolute;
   /* padding: 10px 20px 20px 20px; */
+  top: 40px;
   box-sizing: border-box;
   background-color: #fff;
   width: 142px;
@@ -249,6 +260,9 @@ header .slider_button {
   display: flex;
   flex-direction: row;
   list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .user_navigation>a {
@@ -279,6 +293,8 @@ header .slider_button {
 }
 /*-----------модалка поиска--------------*/
 
+
+
 /* .modal_search {
   display: none;
   position: absolute;
@@ -303,26 +319,35 @@ header .slider_button {
 
 
 /*----МОдалка входа в хидере вход-------------*/
+
+.dropdown-wrp {
+  position: relative;
+}
+/*---------паддинги для user_navigation*/
  .user_navigation:nth-child(1),
  .user_navigation:nth-child(2) {
-  position: relative;
+  padding: 5px 0;
  }
-.user_navigation:nth-child(2) a:hover ~ .modal_login,
-.user_navigation:nth-child(1) a:hover ~ .modal_search {
+
+ .user_navigation:not(:nth-child(3)):hover a {
+  fill: #000;
+  color: #000;
+}
+
+.user_navigation:nth-child(2):hover  .modal_login,
+.user_navigation:nth-child(1):hover  .modal_search {
   display: block;
 }
 
-.modal_login:hover,
-.modal_search:hover {
-  display: block;
-}
+
 
 .modal_login,
 .modal_search {
   display: none;
   position: absolute;
-  top: 37px;
+  top: 42px;
   right: 0;
+  z-index: 2;
 }
 
 .modal_user_form {
@@ -456,15 +481,20 @@ header .slider_button {
 }
 
 .button:hover,
-.btn:hover {
+.btn:hover  {
   background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
   box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 .button:active,
-.btn:active {
+.btn:active{
   background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+/*КОСТЫЛЬ----------*/
+.icecream_btn .btn:hover {
+  background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
 }
 
 .slider {
@@ -526,107 +556,6 @@ header .slider_button {
 
 /*-------------------------------------------------*/
 
-.works.item-1 .my-work.elemet-1 .all {
-  /*Левый флот для блока с слайдером + радио*/
-  float: left;
-}
-
-.my-work.elemet-1 #slides-1 article {
-  float: left;
-}
-
-.my-work.elemet-1 #slides-1 .image {
-  /*устанавливает общий размер блока с изображениями*/
-  width: 3195px;
-  line-height: 0;
-}
-
-.my-work.elemet-1 #overflow-1 {
-  /*сркывает все, что находится за пределами этого блока*/
-  width: 100%;
-  overflow: hidden;
-}
-
-.my-work.elemet-1 article img {
-  /*размер изображений слайдера*/
-  width: 1065px;
-}
-
-.my-work.elemet-1 #desktop-1:checked~#slider-1 {
-  /*размер всего слайдера*/
-  /*максимальнная длинна*/
-  max-width: 1065px;
-}
-
-.my-work.elemet-1 label,
-a {
-  /*при наведении на стрелки или переключатели - курсор изменится*/
-  cursor: pointer;
-}
-
-.my-work.elemet-1 .all input {
-  /*скрывает стандартные инпуты (чекбоксы) на странице*/
-  display: none;
-}
-
-/*позиция изображения при активации переключателя*/
-
-.my-work.elemet-1 #switch-1-1:checked~#slides-1 .image {
-  margin-left: 0;
-}
-
-.my-work.elemet-1 #switch-1-2:checked~#slides-1 .image {
-  margin-left: -100%;
-}
-
-.my-work.elemet-1 #switch-1-3:checked~#slides-1 .image {
-  margin-left: -200%;
-}
-
-.my-work.elemet-1 #controls-1 {
-  /*положение блока всех управляющих элементов*/
-  margin: -105% 0 0 0;
-  width: 100%;
-  min-height: 350px;
-}
-
-.my-work.elemet-1 #active-1 label {
-  /*	стиль отдельного переключателя*/
-  border-radius: 50%;
-  display: inline-block;
-  width: 22px;
-  min-height: 22px;
-  background: aqua;
-}
-
-.my-work.elemet-1 #active-1 {
-  /*	расположение блока с переключателями*/
-  text-align: center;
-  margin-top: 60%;
-  vertical-align: middle;
-}
-
-.my-work.elemet-1 #active-1 label:hover {
-  /*	поведение чекбокса при наведении*/
-  background-color: lightgray;
-  border-color: lightgray;
-  /*	выполнение в любом случае*/
-}
-
-.my-work.elemet-1 #switch-1-1:checked~#active-1 label:nth-child(1),
-.my-work.elemet-1 #switch-1-2:checked~#active-1 label:nth-child(2),
-.my-work.elemet-1 #switch-1-3:checked~#active-1 label:nth-child(3) {
-  /*свойства для радио при наведении*/
-  background: lightgray;
-  border-color: lightgray;
-}
-
-.my-work.elemet-1 #slides-1 .image {
-  /*анимация пролистывания изображений*/
-  transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
-}
-
-/*--------------------------------------------------------------------*/
 
 /*---------------------ПРЯМОУГОЛЬНЫЕ МАЛИНА И ШОКОЛАД------------*/
 
@@ -702,13 +631,33 @@ a {
   width: 267px;
   box-sizing: border-box;
   position: relative;
+  padding-bottom: 20px;
+  /* background: #ededed; */
+}
+
+.icecream::before {
+  content: "";
+  left: -10px;
+  right: -10px;
+  top: -5px;
+  bottom: -20px;
+  position: absolute;
+
+  background-color: yellow;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.icecream::before:hover {
+  opacity: 0.2;
+  visibility: visible;
 }
 
 .icecream_inner {
   position: relative;
 }
 
-.icecream_inner>img {
+.icecreams_container_image>img {
   border-radius: 150px;
 }
 
@@ -749,9 +698,30 @@ a {
   text-decoration: none;
 }
 
-.hidden-btn {
-  display: none;
+.icecream_btn {
+  visibility: hidden;
+  opacity: 0;
 }
+
+.icecream:hover .icecream_inner {
+  position: relative;
+  z-index: 2;
+}
+
+.icecream:hover .icecream_btn {
+  visibility: visible;
+  opacity: 1;
+  /* background-color: unset; */
+}
+
+.icecream_description a {
+  /* color: #990000; */
+}
+
+.icecream_description a:hover {
+  color: #ffbc9e;
+}
+
 
 /*---------------------СТИЛИ ВАФЛИ-------------*/
 
@@ -1188,20 +1158,55 @@ a {
 
 /*-------------Catalog--------------------*/
 
+.header_navigation.active a {
+    background-color: rgba(208, 112, 88, 1);
+    color: #fff;
+}
+
+.modal_menu .active {
+  background-color: rgba(208, 112, 88, 1);
+}
+
+.main_header {
+  position: relative;
+}
+
 .navigation_menu_list {
   display: flex;
   list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.navigation_menu_list li {
+  margin-right: 22px;
+  position: relative;
+}
+
+.navigation_menu_list li:not(:nth-child(3))::after {
+  content: "»";
+  position: absolute;
+  bottom: 0;
+  left: 60px;
 }
 
 .navigation_menu_list .link {
   line-height: 16px;
   font-size: 14px;
   font-weight: 400;
+ 
 }
 
 .general_title {
   font-size: 35px;
   line-height: 41px;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 33px;
 }
 
 .main.container {
@@ -1215,6 +1220,14 @@ a {
 
 /*-----------FILTERS----------------*/
 
+.filter_sorting_title,
+.filter_price_title,
+.filter_weight_title,
+.filter_fillers_title {
+  margin: 0;
+  padding: 0;
+}
+
 .main_filter_form {
   display: flex;
   flex-direction: row;
@@ -1225,28 +1238,195 @@ a {
   border: none;
 }
 
-.fieldset:nth-child(1) .sorting_list {
-  width: 190px;
-  background-color: rgba(248, 247, 244, 0.2);
+/* .select-wrap {
+  width: 193px;
+  height: 37px;
+  overflow: hidden;
+   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
-  width: 194px;
+}
+.select-wrap select {
+background-color: transparent;
+
+} */
+
+.fieldset:nth-child(1) .sorting_list {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  width: 193px;
   min-height: 37px;
+  color: #fff;
+  padding: 0 15px 0 15px;
+  text-align: center;
 }
 
-.fieldset:nth-child(2) input {
-  background-color: rgba(255, 255, 255, 0.2);
-  width: 220px;
-  min-height: 37px;
+.sorting_list option {
+  color: #000;
 }
+
+/*-------треугольник--------------*/
+.filter_sorting_title::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  z-index: 0;
+  border: 5px solid transparent;	
+  border-top: 10px solid #fff;
+}
+
+/*-------------check----------------*/
+
+.filter_sorting p,
+.filter_weight .filter_weight_list,
+.filter_fillers .filter_fillers_list {
+  margin: 0;
+  padding: 0;
+  /* padding-bottom: 5px; */
+}
+
+
+/*-----------SCALE------------*/
+
+.fieldset {
+  margin: 0;
+  padding: 0;
+  margin-right: 15px;
+}
+.fieldset:nth-child(2) {
+  
+  border: none;
+
+  width: 218px;
+}
+
+.range-filter {
+  width: 176x;
+}
+
+.range-controls {
+  position: relative;
+  
+  height: 20px;
+  margin-bottom: 15px;
+  
+  padding-top: 16px;
+
+  padding-right: 20px;
+  padding-left: 20px;
+  
+  background-color: #aabbb1;
+  border-radius: 20px;
+}
+
+.range-controls .scale {
+  height: 4px;
+
+  background: #d1dad3;
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 4px;
+
+  background: #f8f7f4;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  
+  width: 4px;
+  height: 4px;
+  padding: 0;
+
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 40px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+/*-------end----*/
 
 .fieldset:nth-child(3) .filter_weight_list {
   display: flex;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
-  width: 415px;
+  width: 414px;
+  padding-left: 46px;
+  padding-right: 15px;
+  box-sizing: border-box;
   min-height: 37px;
   list-style: none;
+  align-items: center;
+  justify-content: space-between;
 }
+
+/* .filter_weight_list li {
+  position: relative;
+}
+
+.filter_weight_list li::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+
+  background-image: url('../img/radio-off.svg');
+  background-repeat: no-repeat;
+  bottom: -2px;
+  right: 30px;
+}
+
+.filter_weight_list li:nth-child(2)::before,
+.filter_weight_list li:nth-child(3)::before {
+  right: 60px;
+}
+
+.filter_weight_list li:nth-child(4)::before {
+  right: 88px;
+} */
+
+.filter_weight_elem {
+  position: relative;
+}
+
+.filter_weight_elem:hover,
+.filter_weight_elem:focus {
+  color: #663d15;
+}
+
+
+.filter_weight_elem  input[type="radio"] + .radio-indicator {
+  position: absolute;
+  /* display: block; */
+  right: 30px;
+  bottom: -2px;
+  
+  width: 25px;
+  height: 25px;
+  /* background-color: black; */
+  background-image: url('../img/radio-off.svg');
+}
+
+
+.filter_weight_elem  input[type="radio"] + .radio-indicator {
+  border-color: #663d15;
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+
 
 .fieldset:nth-child(4) .filter_fillers_list {
   display: flex;
@@ -1289,7 +1469,9 @@ a {
   font-weight: 500;
 }
 
-.filter_sorting {}
+.filter_sorting {
+  position: relative;
+}
 
 /*------------морожено-------------------*/
 
@@ -1304,9 +1486,38 @@ a {
   flex-wrap: wrap;
 }
 
-.product {
+.icecream {
   width: 267px;
+  /* background: #ededed; */
+  position: relative;
+  padding-bottom: 20px;
 }
+
+.icecream::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  right: -10px;
+  top: -10px;
+  bottom: -20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.icecream_btn {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.icecream:hover::before {
+  opacity: 0.5;
+  visibility: visible;
+}
+
+
+
+
 
 .icecream_price .price {
   font-size: 45px;

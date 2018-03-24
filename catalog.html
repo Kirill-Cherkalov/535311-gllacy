@@ -26,28 +26,61 @@
           </g>
         </svg>
       </a>
-      <ul class="header_navigation_list">
-        <li>
-          <a href="catalog.html">Каталог</a>
+      <!-- <ul class="header_navigation_list">
+        <li class="header_navigation dropdown-wrp active">
+          <a href="catalog.html" >Каталог</a>
         </li>
-        <li>
+        <li class="header_navigation dropdown-wrp">
           <a href="#" class="link">Доставка и оплата</a>
         </li>
-        <li>
+        <li class="header_navigation">
           <a href="#" class="link">О Компании</a>
         </li>
-      </ul>
+      </ul> -->
+      <ul class="header_navigation_list">
+          <li class="header_navigation dropdown-wrp active">
+            <a href="catalog.html" class="link" aria-label="перейти на сайт каталога">Каталог</a>
+            <ul class="sub_menu_list">
+              <li class="modal_menu">
+                Новинки
+              </li>
+              <li class="modal_menu active">
+                <a href="catalog.html">Сливочное</a>
+              </li>
+              <li class="modal_menu">
+                Щербеты
+              </li>
+              <li class="modal_menu">
+                Фруктовый лед
+              </li>
+              <li class="modal_menu">
+                Мелорин
+              </li>
+            </ul>
+          </li>
+          <li class="header_navigation ">
+            <a href="#" class="link">Доставка и оплата</a>
+          </li>
+          <li class="header_navigation">
+            <a href="#" class="link">О Компании</a>
+          </li>
+        </ul>
       <ul class="user_navigation_list">
-        <li class="user_navigation">
+        <li class="user_navigation dropdown-wrp">
           <a href="#">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17">
               <path  d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"
               />
             </svg>
+            <span aria-label="открыть форму для поиска"></span>
           </a>
-          <span class="visually_hidden" aria-label="открыть форму для поиска">Поиск</span>
+          <section class="modal_search">
+              <form class="modal_search_form" method="post" action="https://echo.htmlacademy.ru">
+                <input name="text" type="search" placeholder="Что ищем?" value="">
+              </form>
+            </section>
         </li>
-        <li class="user_navigation">
+        <li class="user_navigation dropdown-wrp">
           <a href="#" aria-label="открыть форму для входа">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19">
               <g >
@@ -57,6 +90,21 @@
             </svg>
             <span>Вход</span>
           </a>
+          <section class=" modal_login">
+              <form class="modal_user_form" method="post" action="https://echo.htmlacademy.ru">
+                <input name="user-login" type="email" placeholder="Электронная почта" value="">
+                <input name="user-password" type="password" placeholder="Пароль" value="">
+                <button class="btn modal_btn" type="submit">Войти</button>
+                <ul class="modal_login_list">
+                  <li>
+                    <a class="modal_login_btn" href="#">Забыли пароль?</a>
+                  </li>
+                  <li>
+                    <a class="modal_login_btn" href="#">Новая регистрация</a>
+                  </li>
+                </ul>
+              </form>
+            </section>
         </li>
         <li class="user_navigation basket">
           <a href="#" aria-label="корзина товаров">
@@ -76,19 +124,20 @@
       <p>С 10 до 20, ежедневно</p>
       <a href="tel:88124502525" aria-label="телефон обратной связи">8 812 450-25-25</a>
     </div>
+    <ul class="navigation_menu_list">
+        <li>
+          <a href="index.html" class="link">Главная</a>
+        </li>
+        <li>
+          <a href="#" class="link">Каталог</a>
+        </li>
+        <li>
+          <a href="#" class="link">Сливочное</a>
+        </li>
+      </ul>
   </header>
   <main class="main container">
-    <ul class="navigation_menu_list">
-      <li>
-        <a href="index.html" class="link">Главная</a>
-      </li>
-      <li>
-        <a href="#" class="link">Каталог</a>
-      </li>
-      <li>
-        <a href="#" class="link">Сливочное</a>
-      </li>
-    </ul>
+   
     <h1 class="general_title">
       Сливочное мороженое
     </h1>
@@ -98,6 +147,7 @@
           <div class="filter_sorting">
             <p class="filter_sorting_title">Сортировка:</p>
             <p>
+              <!-- <div class="select-wrap"> -->
               <select class="sorting_list" name="sorting" id="sorting">
                 <option value="по популярности">
                   <a href="" class="sorting-link">по популярности</a>
@@ -112,34 +162,56 @@
                   <a href="" class="sorting-link">по жирности</a>
                 </option>
               </select>
+              <!-- </div> -->
             </p>
           </div>
         </fieldset>
-        <fieldset class="fieldset">
+        <!-- <fieldset class="fieldset">
           <div class="filter_price">
             <p class="filter_price_title">Цена: 100 руб. – 500 руб.</p>
             <input type="range" id="price" name="price" min="100" max="500" step="50">
           </div>
-        </fieldset>
+        </fieldset> -->
+        <fieldset class="fieldset">
+            <!--<legend>Стоимость:</legend>-->
+            <div class="range-filter">
+               <p class="filter_price_title">Цена: 100 руб. – 500 руб.</p>
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar" style="margin-left: 15%; width: 70%"></div>
+                </div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
+              </div>
+               </div>
+                </fieldset>
         <fieldset class="fieldset">
           <div class="filter_weight">
             <p class="filter_weight_title">Жирность:</p>
             <ul class="filter_weight_list">
-              <li>
-                <input id="filter_weight-zero" type="radio" name="weight" value="0%" checked>
+              <li class="filter_weight_elem">
+                <input class="visually_hidden" id="filter_weight-zero" type="radio" name="weight" value="0%" checked>
+                <span class="radio-indicator"></span>
                 <label for="filter_weight-zero">0%</label>
+                
               </li>
-              <li>
-                <input id="filter_weight-ten" type="radio" name="weight" value="до 10%">
+              <li class="filter_weight_elem">
+                <input class="visually_hidden" id="filter_weight-ten" type="radio" name="weight" value="до 10%">
+                <span class="radio-indicator"></span>
                 <label for="filter_weight-ten">до 10%</label>
+                
               </li>
-              <li>
-                <input id="filter_weight-less-thirty" type="radio" name="weight" value="до 30%">
+              <li class="filter_weight_elem">
+                <input class="visually_hidden" id="filter_weight-less-thirty" type="radio" name="weight" value="до 30%">
+                <span class="radio-indicator"></span>
                 <label for="filter_weight-less-thirty">до 30%</label>
+                
               </li>
-              <li>
-                <input id="filter_weight-more-thirty" type="radio" name="weight" value="выше 30%">
+              <li class="filter_weight_elem">
+                <input class="visually_hidden" id="filter_weight-more-thirty" type="radio" name="weight" value="выше 30%">
+                <span class="radio-indicator"></span>
                 <label for="filter_weight-more-thirty">выше 30%</label>
+                
               </li>
             </ul>
           </div>
@@ -176,15 +248,17 @@
     </section>
     <section class="products">
       <div class="products_list">
-        <article class="icecream icecream-hit">
+        <article class="icecream">
           <div class="icecream_inner">
+              <div class="icecreams_container_image">
             <img src="img/row-1-1.jpg" width="267" height="267" alt="Сливочное">
-            <p class="icecream_price">
+              </div>
+            <p class="icecream_price icecream_info">
               <span class="price">310</span>
               <span class="symbol"></span>
               <span class="measure">/кг</span>
             </p>
-            <p class="icecream-description">
+            <p class="icecream_description">
               <a href="#" class="link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
             </p>
           </div>
@@ -192,53 +266,67 @@
             <a class="btn" type="button">Быстрый просмотр</a>
           </div>
         </article>
-        <article class="icecream icecream-hit">
-          <div class="icecream_inner">
-            <img src="img/row-1-1.jpg" width="267" height="267" alt="Сливочное">
-            <p class="icecream_price">
-              <span class="price">310</span>
-              <span class="symbol"></span>
-              <span class="measure">/кг</span>
-            </p>
-            <p class="icecream-description">
-              <a href="#" class="link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-            </p>
-          </div>
-          <div class="icecream_btn">
-            <a class="btn" type="button">Быстрый просмотр</a>
-          </div>
+        <article class="icecream">
+            <div class="icecream_inner">
+                <div class="icecreams_container_image">
+              <img src="img/row-1-1.jpg" width="267" height="267" alt="Сливочное">
+                </div>
+              <p class="icecream_price icecream_info">
+                <span class="price">310</span>
+                <span class="symbol"></span>
+                <span class="measure">/кг</span>
+              </p>
+              <p class="icecream_description">
+                <a href="#" class="link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+              </p>
+            </div>
+            <div class="icecream_btn">
+              <a class="btn" type="button">Быстрый просмотр</a>
+            </div>
+          </article>
+          <article class="icecream">
+              <div class="icecream_inner">
+                  <div class="icecreams_container_image">
+                <img src="img/row-1-1.jpg" width="267" height="267" alt="Сливочное">
+                  </div>
+                <p class="icecream_price">
+                  <span class="price">310</span>
+                  <span class="symbol"></span>
+                  <span class="measure">/кг</span>
+                </p>
+                <p class="icecream_description">
+                  <a href="#" class="link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+                </p>
+              </div>
+              <div class="icecream_btn">
+                <a class="btn" type="button">Быстрый просмотр</a>
+              </div>
+            </article>
+            <article class="icecream">
+                <div class="icecream_inner">
+                    <div class="icecreams_container_image">
+                  <img src="img/row-1-1.jpg" width="267" height="267" alt="Сливочное">
+                    </div>
+                  <p class="icecream_price icecream_info">
+                    <span class="price">310</span>
+                    <span class="symbol"></span>
+                    <span class="measure">/кг</span>
+                  </p>
+                  <p class="icecream_description">
+                    <a href="#" class="link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+                  </p>
+                </div>
+                <div class="icecream_btn">
+                  <a class="btn" type="button">Быстрый просмотр</a>
+                </div>
+              </article>
+        <!-- <article class="product item">
         </article>
-        <article class="icecream icecream-hit">
-          <div class="icecream_inner">
-            <img src="img/row-1-1.jpg" width="267" height="267" alt="Сливочное">
-            <p class="icecream_price">
-              <span class="price">310</span>
-              <span class="symbol"></span>
-              <span class="measure">/кг</span>
-            </p>
-            <p class="icecream-description">
-              <a href="#" class="link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-            </p>
-          </div>
-          <div class="icecream_btn">
-            <a class="btn" type="button">Быстрый просмотр</a>
-          </div>
+        <article class="product item">
         </article>
-        <article class="icecream icecream-hit">
-          <div class="icecream_inner">
-            <img src="img/row-1-1.jpg" width="267" height="267" alt="Сливочное">
-            <p class="icecream_price">
-              <span class="price">310</span>
-              <span class="symbol"></span>
-              <span class="measure">/кг</span>
-            </p>
-            <p class="icecream-description">
-              <a href="#" class="link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-            </p>
-          </div>
-          <div class="icecream_btn">
-            <a class="btn" type="button">Быстрый просмотр</a>
-          </div>
+        <article class="product item">
+        </article>
+        <article class="product item">
         </article>
         <article class="product item">
         </article>
@@ -247,15 +335,7 @@
         <article class="product item">
         </article>
         <article class="product item">
-        </article>
-        <article class="product item">
-        </article>
-        <article class="product item">
-        </article>
-        <article class="product item">
-        </article>
-        <article class="product item">
-        </article>
+        </article> -->
       </div>
       <section class="pagination">
         <ul class="pagination_list">
@@ -286,59 +366,59 @@
   </main>
   <footer class="main_footer container">
 
-    <article class="footer_social">
-      <ul class="footer_social_list">
-        <li class="social_button">
-          <a class="button--vk" href="#">
-            <span class="visually_hidden">твиттер</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-              <path fill="#FFF" d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm7.944 12.809c-.251 6.516-3.463 10.832-10.992 10.702h-.486c-.447 0-4.543-.443-5.344-1.823 2.479.19 4.247-.406 5.12-1.136-1.048-.289-2.923-.461-3.251-2.848.384.104.618.221 1.299.113-1.307-.824-2.758-1.519-2.679-3.643.311.317 1.164.518 1.46.457-.768-.233-2.149-3.244-.974-4.781 1.984 1.79 4.075 3.482 7.804 3.643.227-2.214 1.24-3.699 3.168-4.325 1.84-.479 3.255.26 3.901 1.138.737-.224 1.453-.466 2.193-.685-.004.833-.569 1.463-.935 1.709.747.165 1.423-.475 1.423-.475-.184.963-1.094 1.725-1.707 1.954z"
-              />
-            </svg>
-          </a>
-        </li>
-        <li class="social_button">
-          <a class="button--inst" href="#">
-            <span class="visually_hidden">Инстаграм</span>
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
-              <g>
-                <path fill="#FFFFFF" d="M20.916,16c0,2.728-2.211,4.938-4.938,4.938S11.039,18.728,11.039,16c0-0.394,0.051-0.773,0.138-1.14
-									h-0.897v6.838h11.396V14.86h-0.897C20.865,15.227,20.916,15.606,20.916,16z" />
-                <path fill="#FFFFFF" d="M15.978,18.659c1.466,0,2.659-1.193,2.659-2.659s-1.193-2.659-2.659-2.659
-									c-1.466,0-2.659,1.193-2.659,2.659S14.511,18.659,15.978,18.659z" />
-                <rect x="18.637" y="10.302" fill="#FFFFFF" width="3.039" height="3.039" />
-                <path fill="#FFFFFF" d="M16,0C7.164,0,0,7.164,0,16c0,8.837,7.164,16,16,16c8.837,0,16-7.163,16-16C32,7.164,24.837,0,16,0z
-								 M23.955,21.698c0,1.254-1.025,2.279-2.279,2.279H10.279C9.026,23.978,8,22.952,8,21.698V10.302c0-1.253,1.026-2.279,2.279-2.279
-								h11.396c1.254,0,2.279,1.026,2.279,2.279V21.698z" />
-              </g>
-            </svg>
-          </a>
-        </li>
-        <li class="social_button">
-          <a class="button--fb" href="#">
-            <span class="visually_hidden ">facebook</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="32 " height="32 " viewBox="0 0 32 32 ">
-              <path fill="#FFF " d="M16 0C7.164 0 0 7.163 0 16s7.164 16 16 16c8.837 0 16-7.164 16-16S24.837 0 16 0zm4.062 9.455h-3.021v3.444h3.021v3.445h-3.021v8.61H14.02v-8.61H11v-3.445h3.021V9.455c0-1.902 1.353-3.445 3.021-3.445h3.021v3.445z "
-              />
-            </svg>
-          </a>
-        </li>
-        <li class="social_button ">
-          <a class="button--vk" href="#">
-            <span class="visually_hidden ">Вконтакте</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="32 " height="32 " viewBox="0 0 32 32 ">
-              <g fill="#FFF ">
-                <path d="M16.637 14.495c.402-.019.719-.082.951-.188.326-.145.54-.33.641-.559.101-.229.15-.496.15-.797 0-.232-.058-.465-.174-.697-.116-.232-.322-.405-.617-.517-.264-.1-.592-.155-.984-.165a76.242 76.242 0 0 0-1.652-.014h-.339v2.965h.565c.571 0 1.057-.009 1.459-.028zM18.118 17.084c-.282-.081-.672-.125-1.166-.132a127.97 127.97 0 0 0-1.55-.009h-.79v3.493h.264c1.014 0 1.74-.003 2.18-.009a3.2 3.2 0 0 0 1.212-.245c.377-.157.633-.364.774-.625s.214-.562.214-.9c0-.446-.088-.788-.261-1.03-.17-.241-.464-.423-.877-.543z "
-                />
-                <path d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm6.602 20.531a3.73 3.73 0 0 1-1.124 1.327c-.552.415-1.161.71-1.823.886s-1.501.264-2.519.264h-6.121V8.987h5.443c1.13 0 1.957.038 2.48.113a5.126 5.126 0 0 1 1.561.5c.533.27.929.632 1.189 1.087.26.455.392.975.392 1.558 0 .678-.179 1.278-.536 1.795-.358.518-.863.92-1.517 1.208v.075c.917.182 1.642.559 2.179 1.13.537.571.807 1.325.807 2.261 0 .678-.138 1.283-.411 1.817z "
-                />
-              </g>
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </article>
+      <article class="footer_social">
+          <ul class="footer_social_list">
+            <li class="social_button">
+              <a class="button--vk" href="#">
+                <span  aria-label="перейти в твиттер"></span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                  <path fill="#FFF" d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm7.944 12.809c-.251 6.516-3.463 10.832-10.992 10.702h-.486c-.447 0-4.543-.443-5.344-1.823 2.479.19 4.247-.406 5.12-1.136-1.048-.289-2.923-.461-3.251-2.848.384.104.618.221 1.299.113-1.307-.824-2.758-1.519-2.679-3.643.311.317 1.164.518 1.46.457-.768-.233-2.149-3.244-.974-4.781 1.984 1.79 4.075 3.482 7.804 3.643.227-2.214 1.24-3.699 3.168-4.325 1.84-.479 3.255.26 3.901 1.138.737-.224 1.453-.466 2.193-.685-.004.833-.569 1.463-.935 1.709.747.165 1.423-.475 1.423-.475-.184.963-1.094 1.725-1.707 1.954z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="social_button">
+              <a class="button--inst" href="#">
+                <span  aria-label="перейти в Инстаграм"></span>
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+                  <g>
+                    <path fill="#FFFFFF" d="M20.916,16c0,2.728-2.211,4.938-4.938,4.938S11.039,18.728,11.039,16c0-0.394,0.051-0.773,0.138-1.14
+                  h-0.897v6.838h11.396V14.86h-0.897C20.865,15.227,20.916,15.606,20.916,16z" />
+                    <path fill="#FFFFFF" d="M15.978,18.659c1.466,0,2.659-1.193,2.659-2.659s-1.193-2.659-2.659-2.659
+                  c-1.466,0-2.659,1.193-2.659,2.659S14.511,18.659,15.978,18.659z" />
+                    <rect x="18.637" y="10.302" fill="#FFFFFF" width="3.039" height="3.039" />
+                    <path fill="#FFFFFF" d="M16,0C7.164,0,0,7.164,0,16c0,8.837,7.164,16,16,16c8.837,0,16-7.163,16-16C32,7.164,24.837,0,16,0z
+                 M23.955,21.698c0,1.254-1.025,2.279-2.279,2.279H10.279C9.026,23.978,8,22.952,8,21.698V10.302c0-1.253,1.026-2.279,2.279-2.279
+                h11.396c1.254,0,2.279,1.026,2.279,2.279V21.698z" />
+                  </g>
+                </svg>
+              </a>
+            </li>
+            <li class="social_button">
+              <a class="button--fb" href="#">
+                <span  aria-label="перейти в facebook"></span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                  <path fill="#FFF" d="M16 0C7.164 0 0 7.163 0 16s7.164 16 16 16c8.837 0 16-7.164 16-16S24.837 0 16 0zm4.062 9.455h-3.021v3.444h3.021v3.445h-3.021v8.61H14.02v-8.61H11v-3.445h3.021V9.455c0-1.902 1.353-3.445 3.021-3.445h3.021v3.445z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="social_button">
+              <a class="button--vk" href="#">
+                <span  aria-label="перейти в Вконтакте"></span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                  <g fill="#FFF">
+                    <path d="M16.637 14.495c.402-.019.719-.082.951-.188.326-.145.54-.33.641-.559.101-.229.15-.496.15-.797 0-.232-.058-.465-.174-.697-.116-.232-.322-.405-.617-.517-.264-.1-.592-.155-.984-.165a76.242 76.242 0 0 0-1.652-.014h-.339v2.965h.565c.571 0 1.057-.009 1.459-.028zM18.118 17.084c-.282-.081-.672-.125-1.166-.132a127.97 127.97 0 0 0-1.55-.009h-.79v3.493h.264c1.014 0 1.74-.003 2.18-.009a3.2 3.2 0 0 0 1.212-.245c.377-.157.633-.364.774-.625s.214-.562.214-.9c0-.446-.088-.788-.261-1.03-.17-.241-.464-.423-.877-.543z"
+                    />
+                    <path d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm6.602 20.531a3.73 3.73 0 0 1-1.124 1.327c-.552.415-1.161.71-1.823.886s-1.501.264-2.519.264h-6.121V8.987h5.443c1.13 0 1.957.038 2.48.113a5.126 5.126 0 0 1 1.561.5c.533.27.929.632 1.189 1.087.26.455.392.975.392 1.558 0 .678-.179 1.278-.536 1.795-.358.518-.863.92-1.517 1.208v.075c.917.182 1.642.559 2.179 1.13.537.571.807 1.325.807 2.261 0 .678-.138 1.283-.411 1.817z"
+                    />
+                  </g>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </article>
     <article class="footer_info">
       <ul class="footer_info_list">
         <li class="footer_info_item">
