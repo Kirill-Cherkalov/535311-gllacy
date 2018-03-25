@@ -146,8 +146,8 @@
         <fieldset class="fieldset">
           <div class="filter_sorting">
             <p class="filter_sorting_title">Сортировка:</p>
-            <p>
-              <!-- <div class="select-wrap"> -->
+         
+              <div class="select-wrap">
               <select class="sorting_list" name="sorting" id="sorting">
                 <option value="по популярности">
                   <a href="" class="sorting-link">по популярности</a>
@@ -162,8 +162,8 @@
                   <a href="" class="sorting-link">по жирности</a>
                 </option>
               </select>
-              <!-- </div> -->
-            </p>
+              </div>
+        
           </div>
         </fieldset>
         <!-- <fieldset class="fieldset">
@@ -220,24 +220,29 @@
           <div class="filter_fillers">
             <p class="filter_fillers_title">Наполнители:</p>
             <ul class="filter_fillers_list">
-              <li>
-                <input id="filter_fillers-choco" type="checkbox" name="fillers-choco">
+              <li class="filter_fillers_elem">
+                <input class="visually_hidden" id="filter_fillers-choco" type="checkbox" name="fillers-choco">
+                <span class="checkbox-indicator"></span>
                 <label for="filter_fillers-choco">шоколадные</label>
               </li>
-              <li>
-                <input id="filter_fillers-sugar" type="checkbox" name="fillers-sugar">
+              <li class="filter_fillers_elem">
+                <input class="visually_hidden" id="filter_fillers-sugar" type="checkbox" name="fillers-sugar">
+                <span class="checkbox-indicator"></span>
                 <label for="filter_fillers-sugar">сахарные присыпки</label>
               </li>
-              <li>
-                <input id="filter_fillers-fruits" type="checkbox" name="fillers-fruits">
+              <li class="filter_fillers_elem">
+                <input class="visually_hidden" id="filter_fillers-fruits" type="checkbox" name="fillers-fruits">
+                <span class="checkbox-indicator"></span>
                 <label for="filter_fillers-fruits">фрукты</label>
               </li>
-              <li>
-                <input id="filter_fillers-syrup" type="checkbox" name="fillers-syrup">
+              <li class="filter_fillers_elem">
+                <input class="visually_hidden" id="filter_fillers-syrup" type="checkbox" name="fillers-syrup">
+                <span class="checkbox-indicator"></span>
                 <label for="filter_fillers-syrup">сиропы</label>
               </li>
-              <li>
-                <input id="filter_fillers-jam" type="checkbox" name="fillers-jam">
+              <li class="filter_fillers_elem">
+                <input class="visually_hidden" id="filter_fillers-jam" type="checkbox" name="fillers-jam">
+                <span class="checkbox-indicator"></span>
                 <label for="filter_fillers-jam">джемы</label>
               </li>
             </ul>
@@ -320,6 +325,78 @@
                   <a class="btn" type="button">Быстрый просмотр</a>
                 </div>
               </article>
+              <article class="icecream">
+                  <div class="icecream_inner">
+                      <div class="icecreams_container_image">
+                    <img src="img/row-1-1.jpg" width="267" height="267" alt="Сливочное">
+                      </div>
+                    <p class="icecream_price icecream_info">
+                      <span class="price">310</span>
+                      <span class="symbol"></span>
+                      <span class="measure">/кг</span>
+                    </p>
+                    <p class="icecream_description">
+                      <a href="#" class="link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+                    </p>
+                  </div>
+                  <div class="icecream_btn">
+                    <a class="btn" type="button">Быстрый просмотр</a>
+                  </div>
+                </article>
+                <article class="icecream">
+                    <div class="icecream_inner">
+                        <div class="icecreams_container_image">
+                      <img src="img/row-1-1.jpg" width="267" height="267" alt="Сливочное">
+                        </div>
+                      <p class="icecream_price icecream_info">
+                        <span class="price">310</span>
+                        <span class="symbol"></span>
+                        <span class="measure">/кг</span>
+                      </p>
+                      <p class="icecream_description">
+                        <a href="#" class="link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+                      </p>
+                    </div>
+                    <div class="icecream_btn">
+                      <a class="btn" type="button">Быстрый просмотр</a>
+                    </div>
+                  </article>
+                  <article class="icecream">
+                      <div class="icecream_inner">
+                          <div class="icecreams_container_image">
+                        <img src="img/row-1-1.jpg" width="267" height="267" alt="Сливочное">
+                          </div>
+                        <p class="icecream_price icecream_info">
+                          <span class="price">310</span>
+                          <span class="symbol"></span>
+                          <span class="measure">/кг</span>
+                        </p>
+                        <p class="icecream_description">
+                          <a href="#" class="link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+                        </p>
+                      </div>
+                      <div class="icecream_btn">
+                        <a class="btn" type="button">Быстрый просмотр</a>
+                      </div>
+                    </article>
+                    <article class="icecream">
+                        <div class="icecream_inner">
+                            <div class="icecreams_container_image">
+                          <img src="img/row-1-1.jpg" width="267" height="267" alt="Сливочное">
+                            </div>
+                          <p class="icecream_price icecream_info">
+                            <span class="price">310</span>
+                            <span class="symbol"></span>
+                            <span class="measure">/кг</span>
+                          </p>
+                          <p class="icecream_description">
+                            <a href="#" class="link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+                          </p>
+                        </div>
+                        <div class="icecream_btn">
+                          <a class="btn" type="button">Быстрый просмотр</a>
+                        </div>
+                      </article>
         <!-- <article class="product item">
         </article>
         <article class="product item">
@@ -422,16 +499,16 @@
     <article class="footer_info">
       <ul class="footer_info_list">
         <li class="footer_info_item">
-          <a class="link_footer" href="#">Для поставщиков</a>
+          <a class="link" href="#">Для поставщиков</a>
         </li>
         <li class="footer_info_item">
-          <a class="link_footer" href="#">О производстве</a>
+          <a class="link" href="#">О производстве</a>
         </li>
         <li class="footer_info_item">
-          <a class="link_footer" href="#">Наши документы</a>
+          <a class="link" href="#">Наши документы</a>
         </li>
         <li class="footer_info_item">
-          <a class="link_footer" href="#">Экологические стандарты</a>
+          <a class="link" href="#">Экологические стандарты</a>
         </li>
       </ul>
     </article>
@@ -447,7 +524,7 @@
     <table class="table">
       <tr class="table_row_item">
         <td class="table_data">
-          <a href="#" aria-label="Удалить товар из корзины">Х</a>
+          <a href="#" aria-label="Удалить товар из корзины"></a>
         </td>
         <td class="table_data"></td>
         <td class="table_data">Пломбир с апельсиновым джемом</td>
@@ -456,7 +533,7 @@
       </tr>
       <tr class="table_row_item">
         <td class="table_data">
-          <a href="#" aria-label="Удалить товар из корзины">Х</a>
+          <a href="#" aria-label="Удалить товар из корзины"></a>
         </td>
         <td class="table_data"></td>
         <td class="table_data">Клубничный пломбир с присыпкой из белого шоколада</td>
