@@ -2393,3 +2393,6 @@ input[type="radio"].visually_hidden {
   padding-bottom: 38px;
 }
 
+.show-form {
+  display: block;
+}
