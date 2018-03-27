@@ -36,23 +36,23 @@
               </svg>
             </a>
             <ul class="header_navigation_list">
-              <li class="header_navigation dropdown-wrp">
-                <a href="catalog.html" class="link" aria-label="перейти на сайт каталога">Каталог</a>
+              <li class="header_navigation dropdown-wrp"  tabindex="0">
+                <a href="catalog.html" class="link" aria-label="перейти на сайт каталога" >Каталог</a>
                 <ul class="sub_menu_list">
-                  <li class="modal_menu">
-                    Новинки
+                  <li class="modal_menu"  tabindex="0">
+                    <a href="#" > Новинки</a>
                   </li>
                   <li class="modal_menu">
                     <a href="catalog.html">Сливочное</a>
                   </li>
                   <li class="modal_menu">
-                    Щербеты
+                    <a href="#"> Щербеты</a>
                   </li>
                   <li class="modal_menu">
-                    Фруктовый лед
+                    <a href="#"> Фруктовый лед</a>
                   </li>
                   <li class="modal_menu">
-                    Мелорин
+                    <a href="#"> Мелорин</a>
                   </li>
                 </ul>
               </li>
@@ -64,7 +64,7 @@
               </li>
             </ul>
             <ul class="user_navigation_list">
-              <li class="user_navigation dropdown-wrp">
+              <li class="user_navigation dropdown-wrp" tabindex="0">
                 <a href="#" class="user_nav_link">
                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17">
                     <path d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"
@@ -78,13 +78,11 @@
                   </form>
                 </section>
               </li>
-              <li class="user_navigation dropdown-wrp">
-                <a href="#" aria-label="открыть форму для входа" class="user_nav_link ">
+              <li class="user_navigation dropdown-wrp" tabindex="0">
+                <a href="#" aria-label="открыть форму для входа" class="user_nav_link" >
                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19">
-                    <!-- <g fill="#000"> -->
                     <path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z" />
                     <path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z" />
-                    <!-- </g> -->
                   </svg>
                   <span>Вход</span>
                 </a>
@@ -120,16 +118,15 @@
           </nav>
           <div class="time_work">
             <p>С 10 до 20, ежедневно</p>
-            <!-- телефон  точно ссылка? стили ссылочные к нему пирменять? -->
             <a href="tel:88124502525" aria-label="телефон обратной связи">8 812 450-25-25</a>
           </div>
         </header>
         <section class="slider">
           <div class="slider_container">
             <div class="slider-controls">
-              <label for="product-1">Первый</label>
-              <label for="product-2">Второй</label>
-              <label for="product-3">Третий</label>
+              <label for="product-1" tabindex="0">Первый</label>
+              <label for="product-2" tabindex="0">Второй</label>
+              <label for="product-3" tabindex="0">Третий</label>
             </div>
             <ul class="slider-list">
               <li class="slider-item slide" id="slide1">
@@ -153,9 +150,6 @@
             </ul>
           </div>
         </section>
-        <!-- </div> -->
-
-        <!-- Конец слайдера -->
       </div>
       <main>
         <section class="offers container">
@@ -168,7 +162,9 @@
               <p class="offer_data">
                 При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
               </p>
+              <div class="facking_buttom">
               <a href="#" class="btn" aria-label="купить варенье">Хочу варенье!</a>
+            </div>
             </article>
             <article class="offer item--chocolate">
               <h3 class="offer_title">
@@ -181,7 +177,7 @@
             </article>
           </div>
           <div class="icecreams">
-            <article class="icecream icecream-hit">
+            <article class="icecream icecream-hit"  tabindex="0">
               <div class="icecream_inner">
                 <div class="icecreams_container_image">
                   <img src="img/row-1-1.jpg" width="267" height="267" alt="Сливочное">
@@ -199,7 +195,25 @@
                 <a class="btn hidden-btn">Быстрый просмотр</a>
               </div>
             </article>
-            <article class="icecream icecream-hit">
+            <article class="icecream icecream-hit"  tabindex="0">
+              <div class="icecream_inner">
+                <div class="icecreams_container_image">
+                  <img src="img/row-1-1.jpg" width="267" height="267" alt="Сливочное">
+                </div>
+                <p class="icecream_price">
+                  <span class="price">310</span>
+                  <span class="symbol"></span>
+                  <span class="measure">/кг</span>
+                </p>
+                <p class="icecream_description">
+                  <a href="#" class="link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+                </p>
+              </div>
+              <div class="icecream_btn"  >
+                <a class="btn hidden-btn">Быстрый просмотр</a>
+              </div>
+            </article>
+            <article class="icecream icecream-hit"  tabindex="0">
               <div class="icecream_inner">
                 <div class="icecreams_container_image">
                   <img src="img/row-1-1.jpg" width="267" height="267" alt="Сливочное">
@@ -217,25 +231,7 @@
                 <a class="btn hidden-btn">Быстрый просмотр</a>
               </div>
             </article>
-            <article class="icecream icecream-hit">
-              <div class="icecream_inner">
-                <div class="icecreams_container_image">
-                  <img src="img/row-1-1.jpg" width="267" height="267" alt="Сливочное">
-                </div>
-                <p class="icecream_price">
-                  <span class="price">310</span>
-                  <span class="symbol"></span>
-                  <span class="measure">/кг</span>
-                </p>
-                <p class="icecream_description">
-                  <a href="#" class="link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-                </p>
-              </div>
-              <div class="icecream_btn">
-                <a class="btn hidden-btn">Быстрый просмотр</a>
-              </div>
-            </article>
-            <article class="icecream icecream-hit">
+            <article class="icecream icecream-hit"  tabindex="0">
               <div class="icecream_inner">
                 <div class="icecreams_container_image">
                   <img src="img/row-1-1.jpg" width="267" height="267" alt="Сливочное">
@@ -315,7 +311,7 @@
                 <a href="tel:+88124502525" class="contacts-tel" aria-label="телефон для обратной связи">8 812 450-25-25</a>
               </b> (с 10 до 20 ежедневно)
             </p>
-            <a class="map_form_btn btn">Форма обратной связи</a>
+            <a class="map_form_btn btn" tabindex="0">Форма обратной связи</a>
           </div>
         </div>
       </section>
