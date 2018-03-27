@@ -3,9 +3,9 @@ let doc = document,
     popup = doc.querySelector('.modal_feedback'),
     close = popup.querySelector('.feedback_form_btn'),
     userName = popup.querySelector('[name=user-name]'),
-    form = popup.querySelector('.modal_feedback_form'),
-    email = popup.querySelector('.user-email'),
-    textArea = popup.querySelector('.feedback') ;
+    form = popup.querySelector('form'),
+    email = popup.querySelector('[name=user-email]'),
+    textArea = popup.querySelector('[name=feedback]') ;
 
 
 
@@ -22,13 +22,14 @@ let doc = document,
 
     function handleForm (event) {
 
-        if ( !!email || !!textArea || !!userName ) {
+        if ( !email || !textArea || !userName ) {
+            event.preventDefault();
+        } else {
             localStorage.setItem('userName', userName.value);
             localStorage.setItem('email', email.value);
             textArea.setItem('textArea', textArea.value);
-        } else {
+            console.log(userName.value);
             event.preventDefault();
-            alert('гг');
         }
     }
 

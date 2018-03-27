@@ -1110,32 +1110,32 @@ input[type="radio"].visually_hidden {
 /*-----------------------------------*/
 
 .map_container {
-  width: 1200px;
+  width: 900px;
   margin: 0 auto;
   margin-top: 39px;
+  z-index: 2;
+  color: #000;
 }
 
 .map_form {
   position: absolute;
   top: 63px;
-  right: 27px;
-
+  right: 257px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
-      flex-direction: column;
+  flex-direction: column;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   width: 302px;
   padding: 0 25px;
   padding-top: 28px;
-
   background-color: #fefefe;
   border-radius: 15px;
-
   -webkit-box-direction: normal;
   -webkit-box-orient: vertical;
+  z-index: 2;
 }
 
 .map_form_paragraph {
@@ -1146,6 +1146,7 @@ input[type="radio"].visually_hidden {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+  z-index: 2;
 }
 
 .map_form_paragraph:nth-child(2) {
@@ -1153,6 +1154,7 @@ input[type="radio"].visually_hidden {
   margin-top: 22px;
   margin-top: 19px;
   padding-bottom: 25px;
+  z-index: 2;
 }
 
 .map_form_paragraph_bold {
@@ -1162,13 +1164,14 @@ input[type="radio"].visually_hidden {
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
+  z-index: 2;
 }
 
 .map_form_paragraph:nth-child(2) .map_form_paragraph_bold {
   padding-top: 5px;
 }
 
-.map_image {
+/* .map_image {
   position: relative;
 
   width: 100%;
@@ -1179,7 +1182,7 @@ input[type="radio"].visually_hidden {
   background-image: url(../img/map.png);
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 
 .map_form_btn {
   display: block;
@@ -1190,12 +1193,14 @@ input[type="radio"].visually_hidden {
   padding: 10px 20px;
 
   text-align: center;
+  z-index: 2;
 }
 
 .contacts-tel {
   font-weight: bold;
   color: #000000;
   text-decoration: none;
+  z-index: 2;
 }
 
 .map_image:after {
@@ -1208,6 +1213,7 @@ input[type="radio"].visually_hidden {
   min-height: 140px;
 
   background-image: url(../img/pin.svg);
+  z-index: 2;
 }
 
 /*-------------------------------------*/
