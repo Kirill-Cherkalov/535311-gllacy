@@ -7,34 +7,55 @@ let doc = document,
     email = popup.querySelector('[name=user-email]'),
     textArea = popup.querySelector('[name=feedback]') ;
 
-
+    let isStorageSupport = true;
+    let storage = '';
+    
+    try {
+      storage = localStorage.getItem('userName');
+    } catch (err) {
+      isStorageSupport = false;
+    }
 
     function handleLink (event) {
         event.preventDefault();
-        popup.classList.add('show-form')
-        userName.focus();
+        popup.classList.add('show-form');
+
+        if ( storage ) {
+            userName.value = storage;
+            email.focus();
+        } else userName.focus();
     }
 
     function closeForm (event) {
         event.preventDefault();
         popup.classList.remove('show-form');
+        popup.classList.remove('modal-error');
     }
 
     function handleForm (event) {
 
-        if ( !email || !textArea || !userName ) {
-            event.preventDefault();
-        } else {
+        if ( !!email.value || !!textArea.value || !!userName.value ) {
             localStorage.setItem('userName', userName.value);
+            localStorage.setItem('textArea', textArea.value);
             localStorage.setItem('email', email.value);
-            textArea.setItem('textArea', textArea.value);
-            console.log(userName.value);
+        } else if (isStorageSupport){
             event.preventDefault();
+            popup.classList.add("modal-error");
         }
     }
 
+    window.addEventListener("keydown", function (event) {
+        if (event.keyCode === 27) {
+            event.preventDefault();
+          if (popup.classList.contains("show-form")) {
+            popup.classList.remove("show-form");
+            popup.classList.remove('modal-error');
+          }
+        }
+      });
 
     link.addEventListener('click', handleLink);
     close.addEventListener('click', closeForm);
     form.addEventListener('submit', handleForm)
+
 
