@@ -40,15 +40,15 @@ let doc = document,
             localStorage.setItem('email', email.value);
         } else if (isStorageSupport){
             event.preventDefault();
-            popup.classList.add("modal-error");
+            popup.classList.add('modal-error');
         }
     }
 
-    window.addEventListener("keydown", function (event) {
+    window.addEventListener('keydown', function (event) {
         if (event.keyCode === 27) {
             event.preventDefault();
-          if (popup.classList.contains("show-form")) {
-            popup.classList.remove("show-form");
+          if (popup.classList.contains('show-form')) {
+            popup.classList.remove('show-form');
             popup.classList.remove('modal-error');
           }
         }
