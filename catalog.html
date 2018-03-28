@@ -6,7 +6,7 @@
   <title>HTML Academy: Глейси</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="catalog-wrapper">
@@ -28,13 +28,13 @@
         </a>
         <ul class="header_navigation_list">
           <li class="header_navigation dropdown-wrp active" tabindex="0">
-            <a href="catalog.html" class="link" aria-label="перейти на сайт каталога"  href="popup.html">Каталог</a>
+            <a href="catalog.html" class="link" aria-label="открыть попап"  href="popup.html">Каталог</a>
             <ul class="sub_menu_list">
               <li class="modal_menu">
                 <a href="#"> Новинки</a>
               </li>
               <li class="modal_menu active">
-                <a href="catalog.html">Сливочное</a>
+                <a href="#">Сливочное</a>
               </li>
               <li class="modal_menu">
                 <a href="#"> Щербеты</a>
@@ -83,7 +83,7 @@
               <form class="modal_user_form" method="post" action="https://echo.htmlacademy.ru">
                 <input name="user-login" type="email" placeholder="Электронная почта" value="">
                 <input name="user-password" type="password" placeholder="Пароль" value="">
-                <button class="btn modal_btn" type="submit">Войти</button>
+                <button class="btn modal_btn" type="submit" aria-label="Войти в свою учетную запись">Войти</button>
                 <ul class="modal_login_list">
                   <li>
                     <a class="modal_login_btn" href="#">Забыли пароль?</a>
@@ -96,7 +96,7 @@
             </section>
           </li>
           <li class="user_navigation basket" tabindex="0">
-            <a href="#" aria-label="корзина товаров" href="popup.html">
+            <a href="#" aria-label=" открыть корзину товаров" href="popup.html">
               <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
                 <path fill="#E84D37" d="M5.888 4.031L6.922 13h10.45l1.176-8.969z" />
                 <circle fill="#343434" cx="6.984" cy="18" r="2" />
@@ -114,7 +114,7 @@
                   </td>
                   <td class="table_data"></td>
                   <td class="table_data">Пломбир с апельсиновым джемом</td>
-                  <td class="table_data">1,5x200 руб.</td>
+                  <td class="table_data">1,5 x 200 руб.</td>
                   <td class="table_data">300 руб.</td>
                 </tr>
                 <tr class="table_row_item">
@@ -123,13 +123,13 @@
                   </td>
                   <td class="table_data"></td>
                   <td class="table_data">Клубничный пломбир с присыпкой из белого шоколада</td>
-                  <td class="table_data">1,5x200 руб.</td>
+                  <td class="table_data">1,5 x 200 руб.</td>
                   <td class="table_data">450 руб.</td>
                 </tr>
               </table>
               <div class="modal_basket_res">
                 <p>Итого:750 руб.</p>
-                <button class="modal_basket_res_btn btn">Оформить заказ</button>
+                <button class="modal_basket_res_btn btn" aria-label="Оформить покупки">Оформить заказ</button>
               </div>
             </section>
           </li>
@@ -141,7 +141,7 @@
       </div>
       <ul class="navigation_menu_list">
         <li class="navigation_menu_elem">
-          <a href="index.html" class="link">Главная</a>
+          <a href="index.html" class="link" aria-label="перейти на главную страницу">Главная</a>
         </li>
         <li class="navigation_menu_elem">
           <a href="#" class="link">Каталог</a>
@@ -161,7 +161,7 @@
             <div class="filter_sorting">
               <p class="filter_sorting_title">Сортировка:</p>
               <div class="select-wrap">
-                <select class="sorting_list" name="sorting" id="sorting">
+                <select class="sorting_list" name="sorting" id="sorting" aria-label=" фильтр - сортировка">
                   <option value="по популярности">
                     по популярности
                   </option>
@@ -179,7 +179,7 @@
             </div>
           </fieldset>
           <fieldset class="fieldset">
-            <div class="range-filter">
+            <div class="range-filter" aria-label=" фильтр - цена">
               <p class="filter_price_title">Цена: 100 руб. – 500 руб.</p>
               <div class="range-controls">
                 <div class="scale">
@@ -193,7 +193,7 @@
           <fieldset class="fieldset">
             <div class="filter_weight">
               <p class="filter_weight_title">Жирность:</p>
-              <ul class="filter_weight_list">
+              <ul class="filter_weight_list" aria-label=" фильтр - жирность">
                 <li class="filter_weight_elem">
                   <label for="filter_weight-zero">0%
                     <input class="visually_hidden" id="filter_weight-zero" type="radio" name="weight" value="0%" checked>
@@ -224,7 +224,7 @@
           <fieldset class="fieldset">
             <div class="filter_fillers">
               <p class="filter_fillers_title">Наполнители:</p>
-              <ul class="filter_fillers_list">
+              <ul class="filter_fillers_list" aria-label=" фильтр - Наполнители">
                 <li class="filter_fillers_elem">
                   <label for="filter_fillers-choco">шоколадные
                     <input class="visually_hidden" id="filter_fillers-choco" type="checkbox" name="fillers-choco">
@@ -258,7 +258,7 @@
               </ul>
             </div>
           </fieldset>
-          <button class="btn_filter" type="submit">
+          <button class="btn_filter" type="submit" aria-label="Применить фильтр">
             <span>Применить</span>
           </button>
         </form>
@@ -280,7 +280,7 @@
               </p>
             </div>
             <div class="icecream_btn">
-              <a class="btn hidden-btn">Быстрый просмотр</a>
+              <a class="btn hidden-btn" aria-label="просмотреть товар">Быстрый просмотр</a>
             </div>
           </article>
           <article class="product" tabindex="0">
@@ -298,7 +298,7 @@
               </p>
             </div>
             <div class="icecream_btn">
-              <a class="btn hidden-btn">Быстрый просмотр</a>
+              <a class="btn hidden-btn" aria-label="просмотреть товар">Быстрый просмотр</a>
             </div>
           </article>
           <article class="product" tabindex="0">
@@ -316,7 +316,7 @@
               </p>
             </div>
             <div class="icecream_btn">
-              <a class="btn hidden-btn">Быстрый просмотр</a>
+              <a class="btn hidden-btn" aria-label="просмотреть товар">Быстрый просмотр</a>
             </div>
           </article>
           <article class="product" tabindex="0">
@@ -330,11 +330,11 @@
                 <span class="measure">/кг</span>
               </p>
               <p class="icecream_description">
-                <a href="#" class="link">Сливочное крем-брюле с карамельной подливкой</a>
+                <a href="#" class="link" aria-label="выбрать товар">Сливочное крем-брюле с карамельной подливкой</a>
               </p>
             </div>
             <div class="icecream_btn">
-              <a class="btn hidden-btn">Быстрый просмотр</a>
+              <a class="btn hidden-btn" aria-label="просмотреть товар">Быстрый просмотр</a>
             </div>
           </article>
           <article class="product" tabindex="0">
@@ -348,11 +348,11 @@
                 <span class="measure">/кг</span>
               </p>
               <p class="icecream_description">
-                <a href="#" class="link">Сливочное с брусничным джемом </a>
+                <a href="#" class="link" aria-label="выбрать товар">Сливочное с брусничным джемом </a>
               </p>
             </div>
             <div class="icecream_btn">
-              <a class="btn hidden-btn">Быстрый просмотр</a>
+              <a class="btn hidden-btn" aria-label="просмотреть товар">Быстрый просмотр</a>
             </div>
           </article>
           <article class="product" tabindex="0">
@@ -366,11 +366,11 @@
                 <span class="measure">/кг</span>
               </p>
               <p class="icecream_description">
-                <a href="#" class="link">Сливочно-черничное с цельными ягодами черники</a>
+                <a href="#" class="link" aria-label="выбрать товар">Сливочно-черничное с цельными ягодами черники</a>
               </p>
             </div>
             <div class="icecream_btn">
-              <a class="btn hidden-btn">Быстрый просмотр</a>
+              <a class="btn hidden-btn" aria-label="просмотреть товар">Быстрый просмотр</a>
             </div>
           </article>
           <article class="product" tabindex="0">
@@ -384,11 +384,11 @@
                 <span class="measure">/кг</span>
               </p>
               <p class="icecream_description">
-                <a href="#" class="link">Сливочно-лимонное с карамельной присыпкой</a>
+                <a href="#" class="link" aria-label="выбрать товар">Сливочно-лимонное с карамельной присыпкой</a>
               </p>
             </div>
             <div class="icecream_btn">
-              <a class="btn hidden-btn">Быстрый просмотр</a>
+              <a class="btn hidden-btn" aria-label="просмотреть товар">Быстрый просмотр</a>
             </div>
           </article>
           <article class="product" tabindex="0">
@@ -402,11 +402,11 @@
                 <span class="measure">/кг</span>
               </p>
               <p class="icecream_description">
-                <a href="#" class="link">Сливочное с шоколадной стружкой</a>
+                <a href="#" class="link" aria-label="выбрать товар">Сливочное с шоколадной стружкой</a>
               </p>
             </div>
             <div class="icecream_btn">
-              <a class="btn hidden-btn">Быстрый просмотр</a>
+              <a class="btn hidden-btn" aria-label="просмотреть товар">Быстрый просмотр</a>
             </div>
           </article>
           <article class="product" tabindex="0">
@@ -420,11 +420,11 @@
                 <span class="measure">/кг</span>
               </p>
               <p class="icecream_description">
-                <a href="#" class="link">Сливочно-ванильное с кусочками шоколада </a>
+                <a href="#" class="link" aria-label="выбрать товар">Сливочно-ванильное с кусочками шоколада </a>
               </p>
             </div>
             <div class="icecream_btn">
-              <a class="btn hidden-btn">Быстрый просмотр</a>
+              <a class="btn hidden-btn" aria-label="просмотреть товар">Быстрый просмотр</a>
             </div>
           </article>
           <article class="product" tabindex="0">
@@ -438,11 +438,11 @@
                 <span class="measure">/кг</span>
               </p>
               <p class="icecream_description">
-                <a href="#" class="link">Сливочноe с ментоловым сиропом</a>
+                <a href="#" class="link" aria-label="выбрать товар">Сливочноe с ментоловым сиропом</a>
               </p>
             </div>
             <div class="icecream_btn">
-              <a class="btn hidden-btn">Быстрый просмотр</a>
+              <a class="btn hidden-btn" aria-label="просмотреть товар">Быстрый просмотр</a>
             </div>
           </article>
           <article class="product" tabindex="0">
@@ -456,11 +456,11 @@
                 <span class="measure">/кг</span>
               </p>
               <p class="icecream_description">
-                <a href="#" class="link">Сливочное с кусочками черного шоколада</a>
+                <a href="#" class="link" aria-label="выбрать товар">Сливочное с кусочками черного шоколада</a>
               </p>
             </div>
             <div class="icecream_btn">
-              <a class="btn hidden-btn">Быстрый просмотр</a>
+              <a class="btn hidden-btn" aria-label="просмотреть товар">Быстрый просмотр</a>
             </div>
           </article>
           <article class="product" tabindex="0">
@@ -474,11 +474,11 @@
                 <span class="measure">/кг</span>
               </p>
               <p class="icecream_description">
-                <a href="#" class="link">Сливочное с мятным сиропом</a>
+                <a href="#" class="link" aria-label="выбрать товар">Сливочное с мятным сиропом</a>
               </p>
             </div>
             <div class="icecream_btn">
-              <a class="btn hidden-btn">Быстрый просмотр</a>
+              <a class="btn hidden-btn" aria-label="просмотреть товар">Быстрый просмотр</a>
             </div>
           </article>
         </div>
@@ -566,23 +566,23 @@
       <article class="footer_info">
         <ul class="footer_info_list">
           <li class="footer_info_item">
-            <a class="link" href="#">Для поставщиков</a>
+            <a class="link" href="#" aria-label="перейкти к информации для поставщиков">Для поставщиков</a>
           </li>
           <li class="footer_info_item">
-            <a class="link" href="#">Наши документы</a>
+            <a class="link" href="#" aria-label="перейти к  документаци">Наши документы</a>
           </li>
           <li class="footer_info_item">
-            <a class="link" href="#">О производстве</a>
+            <a class="link" href="#" aria-label="перейти к информации о производстве">О производстве</a>
           </li>
           <li class="footer_info_item">
-            <a class="link" href="#">Экологические стандарты</a>
+            <a class="link" href="#" aria-label="перейти к информации об экологическим стандартам">Экологические стандарты</a>
           </li>
         </ul>
       </article>
       <article class="footer_copyright">
         <p class="footer_description catalog">
           Сделано в
-          <a class="link" href="https://htmlacademy.ru/">HTML Academy</a> © 2017
+          <a class="link" href="https://htmlacademy.ru/" aria-label="перейти на сайт HTML Academy">HTML Academy</a> © 2017
         </p>
       </article>
     </footer>
