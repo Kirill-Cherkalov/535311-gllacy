@@ -365,6 +365,7 @@ input[type="radio"].visually_hidden {
 
 .user_navigation > a {
   position: relative;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -376,6 +377,7 @@ input[type="radio"].visually_hidden {
   align-items: center;
   min-width: 32px;
   height: 32px;
+
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
 }
@@ -1136,7 +1138,6 @@ input[type="radio"].visually_hidden {
 
 .map_container {
   position: relative;
-  z-index: 2;
 
   width: 1200px;
   margin: 0 auto;
@@ -1149,7 +1150,7 @@ input[type="radio"].visually_hidden {
   position: absolute;
   top: 63px;
   right: 27px;
-  z-index: 2;
+  z-index: 1;
 
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1169,7 +1170,7 @@ input[type="radio"].visually_hidden {
 }
 
 .map_form_paragraph {
-  z-index: 2;
+  position: relative;
 
   width: 155px;
   margin: 0;
@@ -1179,6 +1180,23 @@ input[type="radio"].visually_hidden {
   font-size: 14px;
   line-height: 20px;
 }
+
+.pin {
+  position: relative;
+}
+
+.pin:after {
+  content: "";
+  position: absolute;
+  top: 136px;
+  left: 266px;
+
+  width: 80px;
+  min-height: 140px;
+
+  background-image: url(../img/pin.svg);
+}
+
 
 .map_form_paragraph:nth-child(2) {
   z-index: 2;
@@ -1190,8 +1208,6 @@ input[type="radio"].visually_hidden {
 }
 
 .map_form_paragraph_bold {
-  z-index: 2;
-
   display: block;
   width: 230px;
 
@@ -1218,8 +1234,6 @@ input[type="radio"].visually_hidden {
 }
 
 .map_form_btn {
-  z-index: 2;
-
   display: block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1231,24 +1245,13 @@ input[type="radio"].visually_hidden {
 }
 
 .contacts-tel {
-  z-index: 2;
-
   font-weight: bold;
   color: #000000;
   text-decoration: none;
 }
 
-.map_container:after {
-  content: "";
-  position: absolute;
-  top: 139px;
-  left: 266px;
-  z-index: 2;
-
-  width: 80px;
-  min-height: 140px;
-
-  background-image: url(../img/pin.svg);
+.map_image {
+  position: relative;
 }
 
 .main_footer {
@@ -2386,17 +2389,19 @@ input[type="radio"].visually_hidden {
   display: inline-block;
   width: 26px;
   min-height: 31px;
+
   background-image: url(../img/ruble.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .icecream_description {
-  margin: 0;
-  padding-top: 8px;
-  text-align: center;
   width: 258px;
-  margin:  0 auto;
+  margin: 0;
+  margin: 0 auto;
+  padding-top: 8px;
+
+  text-align: center;
 }
 
 .icecream_btn {
