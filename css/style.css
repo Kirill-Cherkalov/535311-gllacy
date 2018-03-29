@@ -1659,32 +1659,27 @@ input[type="radio"].visually_hidden {
   width: 193px;
   height: 37px;
   overflow: hidden;
-
-  background-color: rgba(255, 255, 255, 0.2);
+  position: relative;
   border-radius: 20px;
 }
 
 .select-wrap select {
   width: 250px;
-
   color: #000000;
-
   background-color: transparent;
   background-color: rgb(0, 0, 0);
-
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  padding: 7px 14px;
 }
 
 .fieldset:nth-child(1) .sorting_list {
-  min-width: 193px;
+
   min-height: 37px;
-  padding: 0 15px 0 15px;
 
-  text-align: center;
   color: #ffffff;
-
   background-color: rgba(255, 255, 255, 0.2);
   border: none;
   border-radius: 20px;
@@ -1710,9 +1705,8 @@ input[type="radio"].visually_hidden {
   content: "";
   position: absolute;
   right: 15px;
-  bottom: 10px;
+  bottom: 8px;
   z-index: 0;
-
   border: 5px solid transparent;
   border-top: 10px solid #ffffff;
 }
@@ -2466,7 +2460,7 @@ input[type="radio"].visually_hidden {
 .modal_user_form .btn.modal_btn {
   display: block;
   min-width: 100px;
-  /* min-height: 44px; */
+
   padding: 0;
 }
 
